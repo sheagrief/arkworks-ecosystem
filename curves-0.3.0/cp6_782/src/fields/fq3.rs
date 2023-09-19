@@ -9,6 +9,7 @@ pub type Fq3 = Fp3<Fq3Parameters>;
 
 pub struct Fq3Parameters;
 
+#[allow(clippy::op_ref)]
 impl Fp3Parameters for Fq3Parameters {
     type Fp = Fq;
 

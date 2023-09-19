@@ -1,6 +1,6 @@
+#![allow(warnings)]
 use ark_ec::{AffineCurve, ProjectiveCurve};
-use ark_std::rand::Rng;
-use ark_std::test_rng;
+use ark_std::{rand::Rng, test_rng};
 
 use crate::*;
 

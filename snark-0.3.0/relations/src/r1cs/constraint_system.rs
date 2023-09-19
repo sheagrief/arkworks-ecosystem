@@ -176,7 +176,8 @@ impl<F: Field> ConstraintSystem<F> {
     /// Specify whether this constraint system should aim to optimize weight,
     /// number of constraints, or neither.
     pub fn set_optimization_goal(&mut self, goal: OptimizationGoal) {
-        // `set_optimization_goal` should only be executed before any constraint or value is created.
+        // `set_optimization_goal` should only be executed before any constraint or
+        // value is created.
         assert_eq!(self.num_instance_variables, 1);
         assert_eq!(self.num_witness_variables, 0);
         assert_eq!(self.num_constraints, 0);
@@ -297,15 +298,17 @@ impl<F: Field> ConstraintSystem<F> {
     /// Transform the map of linear combinations.
     /// Specifically, allow the creation of additional witness assignments.
     ///
-    /// This method is used as a subroutine of `inline_all_lcs` and `outline_lcs`.
+    /// This method is used as a subroutine of `inline_all_lcs` and
+    /// `outline_lcs`.
     ///
-    /// The transformer function is given a references of this constraint system (&self),
-    /// number of times used, and a mutable reference of the linear combination to be transformed.
-    ///     (&ConstraintSystem<F>, usize, &mut LinearCombination<F>)
+    /// The transformer function is given a references of this constraint system
+    /// (&self), number of times used, and a mutable reference of the linear
+    /// combination to be transformed.     (&ConstraintSystem<F>, usize,
+    /// &mut LinearCombination<F>)
     ///
-    /// The transformer function returns the number of new witness variables needed
-    /// and a vector of new witness assignments (if not in the setup mode).
-    ///     (usize, Option<Vec<F>>)
+    /// The transformer function returns the number of new witness variables
+    /// needed and a vector of new witness assignments (if not in the setup
+    /// mode).     (usize, Option<Vec<F>>)
     pub fn transform_lc_map(
         &mut self,
         transformer: &mut dyn FnMut(
@@ -639,7 +642,7 @@ impl<F: Field> ConstraintSystem<F> {
                     self.lc_assignment_cache.borrow_mut().insert(idx, value);
                     Some(value)
                 }
-            }
+            },
         }
     }
 }
@@ -731,6 +734,7 @@ impl<F: Field> Namespace<F> {
     }
 }
 
+#[allow(clippy::drop_ref)]
 impl<F: Field> Drop for Namespace<F> {
     fn drop(&mut self) {
         if let Some(id) = self.id.as_ref() {

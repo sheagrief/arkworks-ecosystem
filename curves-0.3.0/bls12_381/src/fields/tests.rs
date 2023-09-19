@@ -795,6 +795,7 @@ fn test_frob_coeffs() {
 }
 
 #[test]
+#[allow(clippy::uninlined_format_args)]
 fn test_neg_one() {
     let o = -Fq::one();
 
@@ -1569,6 +1570,7 @@ fn test_fq_negate() {
 }
 
 #[test]
+#[allow(clippy::needless_borrow)]
 fn test_fq_pow() {
     let mut rng = ark_std::test_rng();
 
@@ -1712,6 +1714,7 @@ fn test_fq_legendre() {
 }
 
 #[test]
+#[allow(clippy::clone_on_copy)]
 fn test_fq2_ordering() {
     let mut a = Fq2::new(Fq::zero(), Fq::zero());
 

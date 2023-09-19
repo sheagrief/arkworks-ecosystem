@@ -1,3 +1,4 @@
+#![allow(warnings)]
 use crate::params::{get_params, OptimizationType};
 use crate::reduce::{bigint_to_basefield, limbs_to_bigint, Reducer};
 use crate::AllocatedNonNativeFieldVar;

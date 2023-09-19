@@ -9,6 +9,7 @@
     rust_2018_idioms
 )]
 #![allow(clippy::op_ref)]
+#![allow(warnings)]
 
 #[macro_use]
 extern crate ark_std;
@@ -49,7 +50,8 @@ pub mod pairing;
 pub mod alloc;
 /// This module describes a trait for checking equality of variables.
 pub mod eq;
-/// This module implements functions for manipulating polynomial variables over finite fields.
+/// This module implements functions for manipulating polynomial variables over
+/// finite fields.
 pub mod poly;
 /// This module describes traits for conditionally selecting a variable from a
 /// list of variables.

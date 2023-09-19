@@ -1,3 +1,4 @@
+#![allow(clippy::op_ref)]
 use crate::{Fq, Fq2, Fr, FQ_ZERO, G1_COEFF_A_NON_RESIDUE};
 use ark_ec::{
     mnt4,

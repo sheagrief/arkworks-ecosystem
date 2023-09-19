@@ -50,6 +50,7 @@ impl PairingEngine for CP6_782 {
     }
 }
 
+#[allow(warnings)]
 impl CP6_782 {
     pub fn ate_pairing(p: &G1Affine, q: &G2Affine) -> GT {
         CP6_782::final_exponentiation(&CP6_782::ate_miller_loop(p, q))

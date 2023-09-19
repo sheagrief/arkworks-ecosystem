@@ -1,6 +1,8 @@
 use crate::{biginteger::BigInteger, UniformRand};
 use num_bigint::BigUint;
 
+#[allow(clippy::eq_op)]
+
 fn biginteger_arithmetic_test<B: BigInteger>(a: B, b: B, zero: B) {
     // zero == zero
     assert_eq!(zero, zero);

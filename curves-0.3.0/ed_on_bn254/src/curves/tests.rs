@@ -1,8 +1,7 @@
+#![allow(warnings)]
 use ark_ec::{AffineCurve, ProjectiveCurve};
 use ark_ff::{bytes::FromBytes, Zero};
-use ark_std::rand::Rng;
-use ark_std::str::FromStr;
-use ark_std::test_rng;
+use ark_std::{rand::Rng, str::FromStr, test_rng};
 
 use crate::*;
 

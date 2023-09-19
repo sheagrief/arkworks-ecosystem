@@ -1,3 +1,4 @@
+#![allow(warnings)]
 use ark_ec::{
     mnt4,
     mnt4::MNT4Parameters,

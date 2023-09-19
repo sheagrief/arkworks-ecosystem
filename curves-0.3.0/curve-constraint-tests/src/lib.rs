@@ -1,12 +1,12 @@
 #![macro_use]
+#![allow(clippy::eq_op)]
 extern crate ark_relations;
 
 pub mod fields {
     use ark_ff::{BitIteratorLE, Field, UniformRand};
     use ark_r1cs_std::prelude::*;
     use ark_relations::r1cs::{ConstraintSystem, SynthesisError};
-    use ark_std::test_rng;
-    use ark_std::vec::Vec;
+    use ark_std::{test_rng, vec::Vec};
 
     pub fn field_test<F, ConstraintF, AF>() -> Result<(), SynthesisError>
     where

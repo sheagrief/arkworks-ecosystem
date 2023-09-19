@@ -1,3 +1,4 @@
+#![allow(warnings)]
 use crate::{AllocatedNonNativeFieldMulResultVar, NonNativeFieldVar};
 use ark_ff::PrimeField;
 use ark_relations::r1cs::Result as R1CSResult;

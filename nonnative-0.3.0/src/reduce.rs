@@ -1,3 +1,4 @@
+#![allow(warnings)]
 use crate::params::get_params;
 use crate::{overhead, AllocatedNonNativeFieldVar};
 use ark_ff::{biginteger::BigInteger, fields::FpParameters, BitIteratorBE, One, PrimeField, Zero};
